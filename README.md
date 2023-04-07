@@ -1,1 +1,1 @@
-# Java
+# Java Training Project

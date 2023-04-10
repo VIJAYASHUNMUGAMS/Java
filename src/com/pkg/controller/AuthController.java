@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.pkg.exception.UserNotFoundException;
+import java.util.function.BiPredicate;
 
 public class AuthController {
 	public boolean ValidateUser() throws IOException {
@@ -18,12 +19,21 @@ public class AuthController {
 			System.out.println("Enter Password:");
 			pwd = br.readLine();
 
-			if (uname.equals("vijay") && pwd.equals("pass")) {
-				System.out.println("Welcome " + uname.toUpperCase());
+			//Predefined functional interface 0 BiPredicate
+			BiPredicate<String, String> res = (un, pw) -> un.equals("vijay") && pw.equals("pass");			
+			if (res.test(uname, pwd)) {
+				System.out.println("Welcome " + uname.toUpperCase() + " (Validated via BiPredicate) ");
 				return true;
 			} else {
 				throw new UserNotFoundException();
 			}
+			
+			/*if (uname.equals("vijay") && pwd.equals("pass")) {
+				System.out.println("Welcome " + uname.toUpperCase());
+				return true;
+			} else {
+				throw new UserNotFoundException();
+			}*/						
 		} catch (UserNotFoundException err) {
 			System.out.println(err);
 		}

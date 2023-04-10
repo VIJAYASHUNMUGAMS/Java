@@ -15,7 +15,7 @@ public class PatientController implements PatientInterface {
 
 	Patient objPatient;
 	List<Patient> lstPatient = new ArrayList<Patient>();
-
+	
 	public void AddPatient() {
 
 		objPatient = new Patient();
@@ -35,10 +35,8 @@ public class PatientController implements PatientInterface {
 	}
 
 	public void ViewPatient() {
-		// System.out.println(objPatient.getId());
-		// System.out.println(objPatient.getSurname());
-		// System.out.println(objPatient.toString());
 		System.out.println(lstPatient);
+		lstPatient.forEach(System.out :: println);
 	}
 
 	public List<Patient> GetPatient() {

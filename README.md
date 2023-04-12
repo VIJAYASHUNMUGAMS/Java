@@ -15,5 +15,5 @@ Iterator replaced with foreach.<br />
 
 ### Date : 12th April
 
-Update/Delete Record - DB. <br />
+Update/Delete Record from DB. <br />
 `.\src\com\pkg\dao\PatientDao.java`

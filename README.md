@@ -1,5 +1,10 @@
 ## Java Training Project
 
+### Date : 07th April
+
+Volatile Thread. <br />
+`\src\com\pkg\thread\VolatileThread.java`
+
 ### Date : 10th April
 
 Predefined functional interface - BiPredicate changes. <br />

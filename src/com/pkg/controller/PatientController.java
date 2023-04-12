@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+
+import com.pkg.dao.PatientDao;
 import com.pkg.model.Patient;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -14,6 +16,7 @@ import java.io.*;
 public class PatientController implements PatientInterface {
 
 	Patient objPatient;
+	PatientDao objPatientDao = new PatientDao();
 	List<Patient> lstPatient = new ArrayList<Patient>();
 	
 	public void AddPatient() {
@@ -31,12 +34,42 @@ public class PatientController implements PatientInterface {
 		objPatient.setSurname(name);
 		// sc.close();
 
-		lstPatient.add(objPatient);
+		lstPatient.add(objPatient);		
+		objPatientDao.insertPatient(objPatient);
+	}
+	
+	public void UpdatePatient() {
+		objPatient = new Patient();
+		// User Input - Id
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter patient id to be updated");
+		int patientid = sc.nextInt();
+		objPatient.setId(patientid);
+
+		// User Input - Name
+		System.out.println("Enter patient surname to be updated");
+		String name = sc.next();
+		objPatient.setSurname(name);
+		// sc.close();
+
+		objPatientDao.updatePatient(objPatient);
 	}
 
+	public void DeletePatient() {
+		// User Input - Id
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter patient id to be deleted");
+		//int patientid = sc.nextInt();
+
+		objPatientDao.deletePatient(sc.nextInt());
+	}
 	public void ViewPatient() {
 		System.out.println(lstPatient);
-		lstPatient.forEach(System.out :: println);
+		
+		//Iterator replaced with foreach
+		//lstPatient.forEach(System.out :: println); // Data fetch changed to retrieve from DB
+		
+		objPatientDao.showPatient();
 	}
 
 	public List<Patient> GetPatient() {

@@ -16,7 +16,6 @@ class ThreadA extends Thread	 {
 		}
 		System.out.println("Method ended");
 	}
-
 }
 
 public class ThreadClassOne {
@@ -27,5 +26,4 @@ public class ThreadClassOne {
 		ta.start();
 		System.out.println("Main ended");
 	}
-
 }

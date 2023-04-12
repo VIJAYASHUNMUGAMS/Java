@@ -22,12 +22,12 @@ public class MainClass {
 			String sToContinue = "Y";
 			do {
 				System.out.println("Enter your choice \n 1: Add Patient\n 2: View Patient\n 3: Serialize Patient Data\n 4: DeSerialise Patient Data");
-				System.out.println(" 5: Sort by Patient ID\n 6: Sort by Patient Name");
+				System.out.println(" 5: Sort by Patient ID\n 6: Sort by Patient Name\n 7: Update Patient By ID");
 
 				int choice = sc.nextInt();
 				switch (choice) {
 					case 1: {
-						objPC.AddPatient();
+						objPC.AddPatient();						
 						break;
 					}
 					case 2: {
@@ -48,6 +48,14 @@ public class MainClass {
 					}
 					case 6: {
 						objPC.SortyByName();
+						break;
+					}
+					case 7:{
+						objPC.UpdatePatient();
+						break;
+					}
+					case 8:{
+						objPC.DeletePatient();
 						break;
 					}
 				}

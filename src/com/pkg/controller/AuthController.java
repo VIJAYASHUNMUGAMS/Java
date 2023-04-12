@@ -19,7 +19,7 @@ public class AuthController {
 			System.out.println("Enter Password:");
 			pwd = br.readLine();
 
-			//Predefined functional interface 0 BiPredicate
+			//Predefined functional interface - BiPredicate
 			BiPredicate<String, String> res = (un, pw) -> un.equals("vijay") && pw.equals("pass");			
 			if (res.test(uname, pwd)) {
 				System.out.println("Welcome " + uname.toUpperCase() + " (Validated via BiPredicate) ");

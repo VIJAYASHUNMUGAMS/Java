@@ -18,7 +18,7 @@ Iterator replaced with foreach.<br />
 Update/Delete Record from DB. <br />
 `.\src\com\pkg\dao\PatientDao.java`
 
-### Date : 13th April
+### Date : 13th April ( Answers below.... )
 
 No 39:</br >
 171. List the emps whose Sal is more than Blake Sal.</br >

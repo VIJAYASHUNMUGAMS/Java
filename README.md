@@ -21,7 +21,7 @@ Update/Delete Record from DB. <br />
 ### Date : 13th April ( Answers below.... )
 
 No 39:</br >
-171. List the emps whose Sal is more than Blake Sal.</br >
+171. List the emps whose Sal is more than Blake Sal.</br>
 SELECT * FROM EMP WHERE SAL > (SELECT SAL FROM EMP WHERE ENAME = 'BLAKE')
 
 172. List the emps of Deptno 10 whose Jobs are same as any emp job of deptno 20.

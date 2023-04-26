@@ -25,3 +25,7 @@ Update/Delete Record from DB. <br />
 ### Date : 18th April
 
 `.\18_Apr_Cursor.sql`
+
+### Date : 26th April
+
+`.\Output_Via_Jar.png`
